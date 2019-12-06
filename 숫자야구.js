@@ -2,6 +2,9 @@ var 바디 = document.body;
 
 var 숫자후보;
 var 숫자배열;
+var 틀린횟수=0;
+
+바디.textContent="숫자4개를 입력하세요(기회는 10번)";
 
 function 숫자뽑기(){
     숫자후보=[1,2,3,4,5,6,7,8,9];
@@ -25,8 +28,6 @@ var 입력창=document.createElement('input');
 var 버튼=document.createElement('button');
 버튼.textContent='입력';
 폼.append(버튼);
-
-var 틀린횟수=0;
 
 폼.addEventListener('submit', function 비동기(이벤트){
     이벤트.preventDefault();
