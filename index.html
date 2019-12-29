@@ -5,10 +5,39 @@
     <mata charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        header{
+            border-bottom:2px solid gray;
+            padding-left:20px;
+        }
+        footer{
+            border-top:2px solid gray;
+            padding:20px;
+            text-align: center;
+        }
+        .content{
+            display:flex;
+        }
+        .content nav{
+            border-right:2px solid gray;
+        }
+        .content aside{
+            border-left:2px solid gray;    
+        }
+        nav, aside{
+            flex-basis: 150px;
+            flex-shrink: 0;
+        }
+        main{
+            width:1500px;
+            padding:10px;
+        }
         body{
-            background: #20002c;  /* fallback for old browsers */
-            background: -webkit-linear-gradient(to right, #cbb4d4, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #cbb4d4, #20002c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background-image:url("background.jpg");
+            background-size:100%
         }
         img{
             width:200px;
@@ -23,15 +52,34 @@
     </style>
 </head>
 <body>
-    <h1>게임목록</h1>
-    <ol>
-        <li><a href="구구단.html">구구단<br><img src="googoo.jpg"></a></li>
-        <li><a href="끝말잇기.html">끝말잇기<br><img src="word.jpg"></a></li>
-        <li><a href="숫자야구.html">숫자야구<br><img src="baseball.jpg"></a></li>
-        <li><a href="지뢰찾기.html">지뢰찾기<br><img src="mines.jpg"></a></li>
-    </ol>
-<footer>
-    <a href="https://support.microsoft.com/ko-kr/help/3135465/how-to-enable-javascript-in-windows">인터넷 익스플로러에서 실행이 안될경우</a>
-</footer>
+    <div class="container">
+        <header>
+            <h1>웹 게임~!</h1>
+        </header>
+        <section class="content">
+            <nav>
+                <ul>
+                    <li><a href="구구단.html">구구단</a></li>
+                    <li><a href="끝말잇기.html">끝말잇기</a></li>
+                    <li><a href="숫자야구.html">숫자야구</a></li>
+                    <li><a href="지뢰찾기.html">지뢰찾기</a></li>
+                </ul>
+            </nav>
+            <main>
+                <ul>
+                    <li><a href="구구단.html">구구단<br><img src="googoo.jpg"></a></li>
+                    <li><a href="끝말잇기.html">끝말잇기<br><img src="word.jpg"></a></li>
+                    <li><a href="숫자야구.html">숫자야구<br><img src="baseball.jpg"></a></li>
+                    <li><a href="지뢰찾기.html">지뢰찾기<br><img src="mines.jpg"></a></li>
+                </ul>
+            </main>
+            <aside>
+                AD
+            </aside>
+        </section>
+        <footer>
+            <a href="https://support.microsoft.com/ko-kr/help/3135465/how-to-enable-javascript-in-windows">인터넷 익스플로러에서 실행이 안될경우</a>
+        </footer>
+    </div>
 </body>
 </html>
